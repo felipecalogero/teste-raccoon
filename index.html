@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Teste Raccoon</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      button {
+        margin: 10px;
+      }
+      #listaEstoque {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <button id="pegarProdutos" class="btn btn-primary">
+          Mostrar Produtos
+        </button>
+        <button id="pegarProdutosOrdenado" class="btn btn-primary">
+          Mostrar Produtos Ordenados
+        </button>
+        <button id="pegarEstoque" class="btn btn-primary">
+          Mostrar Estoque
+        </button>
+      </div>
+
+      <div class="row">
+        <table class="table table-hover" id="listaProdutos">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <table class="table table-hover" id="listaEstoque">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
