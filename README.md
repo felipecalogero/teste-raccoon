@@ -1,34 +1,29 @@
-# teste-raccoon
-`1` - Para clonar o repositório, execute no terminal o comando ` git clone https://github.com/felipecalogero/teste-raccoon `
+# Teste Raccoon
 
-`2` - Ao abrir o arquivo `index.html` aparecera 3 botões, onde:
+1 - Para clonar o repositório, execute no terminal o comando `git clone https://github.com/felipecalogero/teste-raccoon`
 
-Mostrar produtos - Mostrará todos os produtos existentes.
- 
-Mostrar produtos ordenados - Mostrará todos os produtos ordenados por categoria e consequentemente por seu ID em ordem crescente.
+2 - Ao abrir o arquivo `index.html` aparecera 3 botões, onde:
 
-Mostrar estoque - Mostrará todos os produtos disponíveis em estoque
+- `Mostrar Produtos` - Mostrará todos os produtos existentes.
 
-`3`- Já no arquivo `index.js` terá algumas funções como:
+- `Mostrar Produtos Ordenados` - Mostrará todos os produtos ordenados por categoria e consequentemente por seu ID em ordem crescente.
 
-`pegarProdutos` - Pega todos os produtos da API e aceita como parametro do tipo estoque e também ordenado.
+- `Mostrar Estoque` - Mostrará todos os produtos disponíveis em estoque
 
-`ordenarPorCategoriaIdCrescente` - Se ordenado igual à `true`, então ele ordena por categora e conquentemente por seu ID em ordem crescente.
+3 - Já no arquivo `index.js` terá algumas funções como:
 
-`montarListaDeProdutos`- Mostrará todos os produtos existentes.
+- `pegarProdutos` - Pegar todos os produtos da API e aceitar como parametro tipo (produtos ou estoque) e também ordenado (true ou false).
 
-`montarListaEstoque`- Mostrará a quantidade de cada categoria que tem disponível em estoque.
+- `ordenarPorCategoriaIdCrescente` - Se o parametros ordenado em `pegarProdutos` for igual a `true`, então ele ira chamar `ordenarPorCategoriaIdCrescente` e retornar os produtos ordenados por categoria e ID em ordem crescente.
 
-`consertarResultados`- Chama todas as funções dentro dele que foram utilizadas para consertar o banco de dados .JSON.
+- `montarListaDeProdutos`- Mostrará no HTML todos os produtos existentes.
 
-`resultados.forEach` - Passará linha por linha executando as seguintes funções:
-    
-    - `arrumarCaracteres` - Substitui todos os caracteres incorretos (æ, ¢, ø, ß) com o comando `replace`pelos seus respectivos caracteres (a, c, o, b).
-    - `converterPreco` - Converte todos que estão na categoria preco como `string` para float com o comando `parseFloat`.
-    - `arrumarQuantidade` - Pega todos que estão sem valor na categoria quantidade e informa o valor = 0
+- `montarListaEstoque`- Mostrará no HTML os produtos disponíveis em estoque com suas respectivas categorias.
 
+- `consertarResultados`- Chama todas as funções para consertar os dados do banco de dados (JSON).
 
+- `arrumarCaracteres` - Substitui todos os caracteres incorretos (æ, ¢, ø, ß) com o comando `replace` pelos seus respectivos caracteres (a, c, o, b).
 
+- `converterPreco` - Converte os precos de `string` para `float` com o comando `parseFloat`.
 
-
-
+- `arrumarQuantidade` - Se o produto nao possui quantidade, a funcao cria o atributo ja com o valor setado como 0
